@@ -14,7 +14,7 @@ require_once("../controllers/passenger_controller.php");
   $class="";
   $departure="";
   $arrival="";
-  $Destination="";
+  $destination="";
 
   $errors = array("passenger_id" => "", "fname" => "","lname" => "","dob" => "",
   "gender" => "", "passport" => "","issued_date" => "", "expiration_date" => "", 
@@ -54,7 +54,7 @@ require_once("../controllers/passenger_controller.php");
         $arrival= $_POST['arrival'];
         $destination= $_POST['Destination'];
         
-        var_dump($destination);
+   
         $result=createPassenger_controller($fname, $lname, $dob, $gender, $passport, $issued_date, $expiration_date, $issued_place, $ticket_nbr, $class, $departure, $arrival, $destination);
         if($result){
             echo "Done";

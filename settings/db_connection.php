@@ -1,5 +1,6 @@
 <?php
 require_once("db_cred.php");
+
 class Database{
     public $db = null;
     public $results = null;
@@ -7,22 +8,22 @@ class Database{
     public function db_connect(){
         $this->db = mysqli_connect(servername, username, password, db);
 
-        if(!$this->db){
-            return false;
-        }else if($this->db == null){
-            return false;
-        }else{
-            return true;
-        }
+        // $this->db = mysqli_connect(SERVER,USERNAME,PASSWD,DATABASE);
+		//testing the database connection
+		if (mysqli_connect_errno()) {
+			return false;
+		}else{
+			return true;
+		}
     }
 
     public function db_query($sql){
-        if($this->db == null){
-            return false;
-        }
-        if(!$this->db){
-            return false;
-        }
+        if (!$this->db_connect()) {
+			return false;
+		} 
+		elseif ($this->db==null) {
+			return false;
+		}
 
         $this->results = mysqli_query($this->db, $sql);
 

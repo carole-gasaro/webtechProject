@@ -81,7 +81,47 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <title> Add Flight</title>
-
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body
+      {
+        background: lightgrey;
+        padding: 30px 30px 75px;
+        font-size: 18px;
+        /* background-image: url(../img/inside.jpg); */
+      }
+      h1 
+      {
+        text-align: center;
+      }
+      .label-title{
+        padding-top: 10px;
+        width: 15%;
+      } 
+      .input-group{
+        padding-left: 230px;
+      } 
+      .btn
+      {
+        border: none;
+        outline: none;
+        height: 50px;
+        width: 15%;
+        background-color: orange;
+        border: radius 4px;
+        font-weight:bold ;
+      }
+      .btn:hover
+      {
+        background: white;
+        border: 1px solid;
+        color: black;
+      }
+    </style>
     
   </head>
   <body>
@@ -99,18 +139,18 @@
         <!-- Firstname and Lastname -->
         <div class="horizontal-group">
           <div class="form-group left">
-            <label for="fnumber" class="label-title">Flight Number</label>
+            <label for="fnumber" class="label-title">Flight Number: </label>
             <input type="text" id="fnumber" class="form-input" placeholder="enter the flight number" required="required" name='fnumber'/>
           </div>
           <div class="form-group right">
-            <label for="eseat" class="label-title">Seats Available in Economy Class</label>
+            <label for="eseat" class="label-title">Seats Available in Economy Class: </label>
             <input type="number" id="eseat" class="form-input"  name='eseat'/>
           </div>
         </div>
 
         <!-- DOB -->
         <div class="form-group">
-          <label for="bseat" class="label-title">Seats Available in Business Class</label>
+          <label for="bseat" class="label-title">Seats Available in Business Class: </label>
           <input type="number" id="bseat" class="form-input" required="required" name='bseat'>
         </div>
 
@@ -141,7 +181,7 @@
 
         <!-- Expiration date -->
         <div class="form-group">
-          <label for="duration" class="label-title">Duration</label>
+          <label for="duration" class="label-title">Duration: </label>
           <input type="time" id="duration" class="form-input" placeholder="" required="required" name='duration'>
         </div> 
 
